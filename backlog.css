@@ -1,0 +1,45 @@
+.backlog-container{
+    background-color:#f4f3fb;
+    padding:8px;
+}
+
+.height35px{
+    height:35px;
+    width: auto;
+}
+
+.pd-12{
+    padding-left: 12px;
+}
+
+.urgent-border{
+    border-left: 5px solid;
+    border-radius: 5px;
+
+}
+
+.urgent1 {
+    
+  border-left-color: rgb(56, 228, 13);
+  }
+  .urgent2 {
+    
+    border-left-color: rgb(216,240,7);
+    }.urgent3 {
+    
+        border-left-color: red;
+        }
+
+        .btn-to-board{
+min-height: 55px;
+border-radius: 5px;
+text-align: center;
+line-height: 55px;
+
+        }
+
+        .btn-to-board:hover{
+            background-color: blue;
+            color: white;
+            cursor: pointer;
+        }

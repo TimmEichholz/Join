@@ -1,0 +1,148 @@
+.fixed-left {
+  top: 0;
+  left: 0;
+  position: fixed;
+  /* min-height: 100vh; */
+  bottom: 0 !important;
+  right: auto;
+  flex-flow: column nowrap !important;
+  align-items: flex-start;
+}
+
+.navbar-collapse {
+  align-items: flex-start !important;
+}
+
+.bg-sidebar {
+  background-color: #1e3190;
+}
+
+.navbar-logo {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  height: 70px;
+}
+
+.navbar-profile-container {
+  margin-bottom: 30px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid white;
+}
+
+.navbar-collapse {
+  align-items: flex-start !important;
+}
+
+.nav-item {
+  color: #bec0ce !important;
+  padding-left: 2.5rem !important;
+  min-width: 200px;
+  font-size: 1.2rem;
+}
+
+.nav-item:hover {
+  opacity: 0.7;
+}
+
+.active-nav-item {
+  color: white !important;
+  border-left: 10px solid;
+}
+
+
+.navbar-profile-container {
+  margin-bottom: 30px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid white;
+}
+.navbar-logout {
+  color: white !important;
+  font-weight: bold;
+}
+
+.glyphicon-log-out{
+  margin-left: 10px;
+}
+
+.collapse-text {
+  margin-left: 10px;
+}
+
+.toggle-collapse .collapse-text {
+  display: none;
+}
+
+.toggle-collapse .nav-item {
+  min-width: 60px ;
+  padding-left: 1rem !important;
+}
+
+
+.toggle-collapse .navbar-logo {
+  height: 30px ;
+}
+
+.toggle-collapse .navbar-profile-container{
+  height: 40px;
+}
+
+.toggle-collapse .glyphicon-log-out{
+  display: none;
+}
+
+.button-toggle{
+  color: white;
+}
+
+.btn:hover{
+  color: white !important;
+}
+
+.button-toggle svg{
+  transform: scale(2);
+}
+
+
+@media (max-width: 768px) {
+
+  .collapse-text {
+    display: none;
+  }
+  
+  .nav-item {
+    min-width: 60px ;
+    padding-left: 1rem !important;
+  }
+  
+  
+  .navbar-logo {
+    height: 30px ;
+  }
+  
+  .navbar-profile-container{
+    height: 40px;
+  }
+  
+  .glyphicon-log-out{
+    display: none;
+  }
+
+  .toggle-collapse .collapse-text {
+    display: block !important;
+  }
+
+  .toggle-collapse .nav-item {
+    min-width: 150px !important;
+  }
+
+  .active-nav-item{
+    border-left: 5px solid;
+  }
+
+
+
+}

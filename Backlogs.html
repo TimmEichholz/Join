@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Backlogs</title>
+
+  <!-- styles required by every page-->
+  <link rel="stylesheet" href="main.css" />
+  <!-- required for bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous" />
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"
+    integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js"
+    integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc"
+    crossorigin="anonymous"></script>
+
+  <!--required for Jquery-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <!-- required for public sidebar  -->
+  <script src="public/sidebar.js"></script>
+  <link rel="stylesheet" href="public/sidebar.css" />
+
+  <!-- fonts: PT Sens regular and PT Sens bold -->
+  <link rel="preconnect" href="https://fonts.gstatic.com" />
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet" />
+
+  <!-- style sheet for this page-->
+  <link rel="stylesheet" href="help.css" />
+  <link rel="stylesheet" href="backlog.css" />
+
+
+  <!-- class objects for this page-->
+  <script src="class/User.class.js"></script>
+  <script src="class/Task.class.js"></script>
+  <script src="class/Log.class.js"></script>
+
+  <!-- js functions for this page-->
+  <script src="mini_backend.js"></script>
+  <script src="main.js"></script>
+  <script src="Backlogs.js"></script>
+</head>
+
+<body onload="init(), loginActive(), navItemActive('nav-btn-backLog'), loadLogs()">
+  <div class="wrapper">
+    <!-- navbar left -->
+    <div w3-include-html="public/sidebar.html"></div>
+
+    <!-- page content "add task" -->
+    <div class="wrapper-pagecontent">
+      <div class="container-fluid">
+        <!-- Title of the page content-->
+        <div class="container-fluid mt-5 mind-width">
+          <div class="page-content-title">Backlogs</div>
+          <span class="text-blue font-bold">Records of all created tasks</span>
+        </div>
+
+        <!-- Input window of adding a new task-->
+
+        <div class="container-fluid mt-5">
+          <div class="container-fluid p-4">
+            <div class="container-fluid row mt-3 mb-2 p-zero" style="font-weight: bold; height: 50px">
+              <div class="col-1" style="color: blue"></div>
+              <div class="col-2" style="color: blue">TASK</div>
+              <div class="col-2" style="color: blue">OPERATOR</div>
+
+              <div id="User-Information" class="col-3" style="color: blue">
+                ASIGNED TO
+              </div>
+
+              <!--<div class="col-2">Name</div>-->
+
+              <!--<div class="col-3">E-mail</div>-->
+
+              <div class="col-2" style="color: blue">CATEGORY</div>
+
+              <div class="col-2" style="color: blue">DETAILS</div>
+            </div>
+
+            <div id="load-logs">
+              <!--loadElement.innerHTML += `<div class="container-fluid row mb-3" style="height: 50px">
+        <div class="col-2 align-content-center h-100">
+          <img
+            class="h-100 d-inline-block rounded-circle"
+            src="${newLog.userAvatar}"
+            alt=""
+          />
+        </div>
+        
+        <div class="col-2 h-100 align-txt">${newLog.userName}</div>
+
+        <div class="col-3 h-100 align-txt"><a href="${newLog.userEmail}">${newLog.userEmail}</a></div>
+
+        <div class="col-2 h-100 align-txt">${newLog.logCategory}</div>
+    
+        <div class="col-3 h-100 align-txt">${newLog.logDetails}</div>
+      </div>`;-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .align-txt {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .h-25 {
+      height: 25% !important;
+    }
+
+    .h-50 {
+      height: 50% !important;
+    }
+
+    .height-100 {
+      height: 100%;
+    }
+
+    .vl {
+      border-left: 5px solid green;
+      height: 100%;
+      border-radius: 5px;
+    }
+
+    /*
+.Heigh {
+  border-left: 5px solid rgb(128, 0, 0);
+  height: 100%;
+ border-radius: 5px;
+}
+
+.Medium {
+  border-left: 5px solid rgb(216, 240, 7);
+  height: 100%;
+ border-radius: 5px;
+}
+
+.Low {
+  border-left: 5px solid rgb(56, 228, 13);
+  height: 100%;
+ border-radius: 5px;
+}
+*/
+
+    .p-zero {
+      padding-left: 0 !important;
+    }
+
+    .board-text-short {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .container-fluid {
+      min-width: 1500px;
+    }
+
+    .wrapper {
+      min-height: 100vh;
+      overflow-y: hidden;
+    }
+  </style>
+</body>
+
+</html>

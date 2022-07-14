@@ -1,0 +1,49 @@
+.wrapper-pagecontent {
+    width: 80%;
+  }
+  .wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+  }
+
+  .font-bold {
+    font-weight: 700;
+  }
+
+  .text-blue {
+    color: #4656a4;
+  }
+
+  .wrapper-pagecontent {
+    width: 80%;
+  }
+
+  .page-content-title {
+    font-weight: 700;
+    font-size: 24px;
+  }
+
+  .bg-form-input {
+    background-color: #f4f3fb;
+    border-radius: 15px;
+  }
+
+  .form-label-text {
+    font-size: 15px;
+    font-weight: 700;
+    color: #444882;
+  }
+
+  .bg-purple {
+    background-color: #18318c;
+    border: none;
+  }
+
+
+  @media (max-width: 768px) {
+
+    .wrapper-pagecontent {
+      width: 97%;
+    }
+  }

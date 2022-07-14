@@ -1,0 +1,91 @@
+.font-bold {
+  font-weight: 700;
+}
+
+.text-blue {
+  color: #4656a4;
+}
+
+
+
+.wrapper-pagecontent {
+  width: 80%;
+}
+
+.page-content-title {
+  font-weight: 700;
+  font-size: 24px;
+}
+
+.bg-form-input {
+  background-color: #f4f3fb;
+  border-radius: 15px;
+}
+
+.form-label-text {
+  font-size: 15px;
+  font-weight: 700;
+  color: #444882;
+}
+
+.mr-30 {
+  margin-right: 30px;
+}
+
+.bg-purple {
+  background-color: #18318c;
+  border: none;
+}
+
+.btn-lg{
+    font-size: 1rem;
+}
+
+
+.dropdown-menu {
+  width: 100%;
+}
+
+.scrollable-menu {
+  height: auto;
+  max-width: 200px;
+  max-height: 200px;
+  overflow-x: hidden;
+}
+
+.btn-white {
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.form-profile-container {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.profile-delete-icon{
+  position: absolute;
+  transform: translateX(25px) translateY(-10px);
+  color: red;
+  cursor: pointer;
+}
+
+.asign-task-to-new-user {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: #d8dad6;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+
+  .wrapper-pagecontent {
+    width: 97%;
+  }
+
+}
